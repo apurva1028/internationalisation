@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+
 import I18n from './../../utils/I18n';
 import "./Home.css"
 
 
 function Home() {
 
-const usersCount = 20;
+const usersCount = 15;
 
 
   return (
