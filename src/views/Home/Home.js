@@ -5,9 +5,9 @@ import "./Home.css"
 
 function Home() {
 
-// const usersCount = 15;
+const usersCount = 20;
 
-const [lang, setLang] = useState("mr");
+
   return (
     <div>
         <h1>{I18n("welcomeMessage")}</h1>
@@ -15,6 +15,8 @@ const [lang, setLang] = useState("mr");
         <p>{I18n("normalMessage")}</p>
 
         <h3>{I18n("greetingMessage")}</h3>
+
+        <h5>{I18n("endMessage")}</h5>
 
         <select 
         defaultValue={localStorage.getItem("lang")} 
@@ -27,9 +29,9 @@ const [lang, setLang] = useState("mr");
           <option value="en">English</option>
         </select>
         
-        {/*<p>
-            {usersCount} users are learning in this session.
-  </p> */}
+        <p>
+          {I18n("usersStatMessage", "<studentCount>", usersCount)}
+        </p>
         
         </div>
   )
